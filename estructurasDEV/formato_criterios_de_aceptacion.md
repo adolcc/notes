@@ -12,30 +12,30 @@ Son fundamentales para guiar el desarrollo y servir como base para las pruebas.
 
 ---
 
-## Criterios de Ejemplo: Subida de Archivos PDF. 
+## Ejemplo:  
 
 Utiliza este formato para definir escenarios claros para la Historia de Usuario:
 
-#### Escenario 1: Subida exitosa. 
+#### Escenario de subida de PDF exitosa.  
 
-DADO que soy un usuario autenticado en la aplicación. 
-CUANDO selecciono la opción "Subir PDF". 
-ENTONCES se me permite seleccionar un archivo PDF desde mi dispositivo.    
+DADO que soy un usuario autenticado en la aplicación.  
+CUANDO selecciono la opción "Subir PDF".   
+ENTONCES se me permite seleccionar un archivo PDF desde mi dispositivo.     
 
-DADO que he seleccionado un archivo PDF válido. 
-CUANDO confirmo la subida. 
-ENTONCES el sistema muestra una barra de progreso durante la carga. 
-Y recibo una notificación de éxito cuando termina. 
-Y puedo ver el PDF en mi biblioteca. 
+DADO que he seleccionado un archivo PDF válido.  
+CUANDO confirmo la subida.  
+ENTONCES el sistema muestra una barra de progreso durante la carga.  
+Y recibo una notificación de éxito cuando termina.  
+Y puedo ver el PDF en mi biblioteca.  
 
-#### Escenarios de Error (Casos Negativos). 
+#### Escenarios de Error (Casos Negativos).  
 
-DADO que intento subir un archivo que no es PDF. 
-CUANDO confirmo la subida. 
-ENTONCES el sistema muestra un mensaje de error indicando que solo se permiten archivos PDF. 
+DADO que intento subir un archivo que no es PDF.  
+CUANDO confirmo la subida.  
+ENTONCES el sistema muestra un mensaje de error indicando que solo se permiten archivos PDF.  
 
-#### Exceder el límite de tamaño. 
+#### Exceder el límite de tamaño.  
 
-DADO que intento subir un archivo PDF mayor a 10MB
-CUANDO confirmo la subida
-ENTONCES el sistema muestra un error indicando el límite de tamaño permitido
+DADO que intento subir un archivo PDF mayor a 10MB.   
+CUANDO confirmo la subida.  
+ENTONCES el sistema muestra un error indicando el límite de tamaño permitido.  
