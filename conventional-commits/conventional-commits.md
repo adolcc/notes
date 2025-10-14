@@ -14,9 +14,11 @@
 - ci: Cambios en los archivos o scripts de integración continua.   
 - chore: Tareas de mantenimiento que no modifican el código fuente principal.    
 
-##### Ambito (opcional): Indica la parte del código que se ve afectada, por ejemplo, feat(auth):   
+##### Ambito (opcional): Indica la parte del código que se ve afectada,   
+por ejemplo: *feat(auth):*   
 
-##### Descripción: Breve descripción del cambio en infinitivo, seguida de un punto. Por ejemplo, feat(user): añadir nuevo campo de correo.  
+##### Descripción: Breve descripción del cambio en infinitivo, seguida de un punto.   
+Por ejemplo: *feat(user): añadir nuevo campo de correo.*  
 
 #### Cuerpo (opcional): Descripción más detallada que explica el porqué del cambio.  
 
@@ -24,17 +26,17 @@
 
 #### Estructura Sencilla:
 
-<Tipo>(ambito/optcional): <Descripción>
+*Tipo (ambito/optcional): <Descripción>.*  
 
 - Ejemplo: 
 git commit -m "feat(partitura-api): agregar listado de PDFs de partituras"
 
 #### Estructura completa:
-<HEADER>  
-(LINEA BLANCA)  
-[Cuerpo Opcional (Body)]  
-(LINEA BLANCA)  
-[Pie(s) de Pagina Opcional(es) (Footer)]  
+HEADER       
+LINEA BLANCA        
+Cuerpo Opcional (Body).     
+LINEA BLANCA     
+Pie(s) de Pagina Opcional(es) (Footer)     
 
 - Ejemplo:
 
