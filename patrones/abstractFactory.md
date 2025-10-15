@@ -1,5 +1,5 @@
 El **patrón Abstract Factory** es un patrón creacional de diseño que permite crear familias de objetos relacionados sin especificar sus clases concretas. Se usa para crear un conjunto de productos (como una computadora y un monitor) de forma que solo se cree una versión compatible de los mismos (por ejemplo, de escritorio o portátil), lo que mejora la modularidad y la flexibilidad del código. En Java, esto se implementa creando una interfaz de "fábrica abstracta" y clases "fábricas concretas" para cada tipo de familia de productos.  
-
+___
 ```java
 // 1. Interfaz del producto A (Motor)
 interface Motor {
