@@ -17,7 +17,7 @@ El uso de prefijos en los nombres de las ramas ayuda a identificar rápidamente 
 - Ramas de lanzamiento: Estas ramas se utilizan para preparar una nueva versión de producción. Permiten realizar ajustes de última hora. Use el prefijo release/. Por ejemplo, release/v1.0.1.
 Ramas de documentación: Estas ramas se utilizan para escribir, actualizar o corregir la documentación, por ejemplo, el archivo README.md. Use el prefijo docs/. Por ejemplo, docs/api-endpoints.  
 ___
-##### Incluir números de tickets de Jira (u otra herramienta de gestión de proyectos).  
+#### Incluir números de tickets de Jira (u otra herramienta de gestión de proyectos).  
 En algunos flujos de trabajo, especialmente en equipos grandes, es habitual incluir el número de ticket de una herramienta de gestión de proyectos como Jira en el nombre de la rama. Esto facilita el seguimiento del trabajo realizado en un ticket específico. Por ejemplo, si está trabajando en un ticket con el número "T-123" para añadir un nuevo sistema de inicio de sesión, el nombre de la rama podría ser feature/T-123-new-login-system.
 ___
 #### Ejemplos de nombres de sucursales.  
