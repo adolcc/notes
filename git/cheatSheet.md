@@ -1,1 +1,1 @@
-[git](https://git-scm.com/cheat-sheet)
+[git_cheat_sheet](https://git-scm.com/cheat-sheet)
