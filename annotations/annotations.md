@@ -6,8 +6,8 @@ ___
 
 ¿Cómo se ven? Se escriben precedidas por el símbolo @, por ejemplo, @Override.
 
-
-##### ¿Para qué sirven?
+___
+#### ¿Para qué sirven?
 Para el compilador: Verificar que el código sea correcto. Por ejemplo, @Override garantiza que un método esté sobreescribiendo correctamente un método de una clase padre.
 
 
@@ -17,7 +17,7 @@ Para herramientas de desarrollo: Como Project Lombok, que usa @Data para generar
 Para el código en tiempo de ejecución: Añadir lógica o configuración. Por ejemplo, usar @NotNull en un parámetro de método para que se lance una excepción si el valor es nulo. 
 
 #### Ejemplos:
-##### Anotaciones predefinidas
+#### Anotaciones predefinidas
 - @Override: Indica que un método de una subclase sobreescribe un método de una superclase.
 ```java
 class Animal {
