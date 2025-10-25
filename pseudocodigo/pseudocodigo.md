@@ -14,40 +14,49 @@ ___
 - Funciones/Procedimientos: FUNCIÓN, PROCEDIMIENTO, RETORNAR
 ___
 #### Ejemplo:
-// Inicio del programa
+// Inicio del programa  
 PROCEDIMIENTO sumarNumeros
 
-// Declarar variables
+
+// Declarar variables  
 NUMERO numero1
 NUMERO numero2
-NUMERO suma
+NUMERO suma  
 
-// Pedir los números al usuario
+
+// Pedir los números al usuario  
 ESCRIBIR "Por favor, introduce el primer número:"
-LEER numero1
+LEER numero1  
+
 
 ESCRIBIR "Por favor, introduce el segundo número:"
-LEER numero2
+LEER numero2  
 
-// Realizar la suma
-suma <- numero1 + numero2
 
-// Mostrar el resultado
+// Realizar la suma  
+suma <- numero1 + numero2  
+
+
+// Mostrar el resultado  
 ESCRIBIR "La suma de los números es: ", suma
 
-FIN_PROCEDIMIENTO
+
+FIN_PROCEDIMIENTO  
 ___
-// Definición de la función
+// Definición de la función  
 FUNCION contarVocales(cadena_texto) RETORNA ENTERO:
 
-// 1. Declarar e inicializar el contador
+
+// 1. Declarar e inicializar el contador  
 ENTERO contador_de_vocales <- 0
 
-// 2. Convertir la cadena a minúsculas para simplificar la validación
+
+// 2. Convertir la cadena a minúsculas para simplificar la validación  
 cadena_texto <- CONVERTIR_A_MINUSCULAS(cadena_texto)
 
-// 3. Iterar sobre cada carácter de la cadena
-PARA CADA caracter EN cadena_texto HACER
+
+// 3. Iterar sobre cada carácter de la cadena  
+PARA CADA caracter EN cadena_texto HACER  
 
     // 4. Verificar si el carácter es una vocal
     SI (caracter ES IGUAL A 'a' O 'e' O 'i' O 'o' O 'u') ENTONCES
@@ -55,9 +64,10 @@ PARA CADA caracter EN cadena_texto HACER
         contador_de_vocales <- contador_de_vocales + 1
     FIN_SI
 
-FIN_PARA
+FIN_PARA  
 
-// 6. Retornar el resultado final
+// 6. Retornar el resultado final  
 RETORNAR contador_de_vocales
+
 
 FIN_FUNCION
