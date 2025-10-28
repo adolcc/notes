@@ -6,7 +6,7 @@ Está diseñado para gestionar el bloqueo de I/O, donde un hilo se bloquea hasta
 
 Spring Web es ideal para aplicaciones web tradicionales que requieren comunicación síncronica. 
 
-Srping WebFlux, por otro lado, es un freamework web reactivo basado en Reactive Streams. Está diseñado para gestionar I/O no bloqueantes, donde un hilo no se bloequea mientras espera una respuesta de una base de datos u otro servicio. En cambio, la aplicación puede continuar procesando otras solicitudes mientras espera la respuesta. Spring WebFlux es ideal para aplicaciones que requieren alta concurrencia, como aplicaciones de transmisión o procesamiento de datos en tiempo real.\  
+Srping WebFlux, por otro lado, es un freamework web reactivo basado en Reactive Streams. Está diseñado para gestionar I/O no bloqueantes, donde un hilo no se bloequea mientras espera una respuesta de una base de datos u otro servicio. En cambio, la aplicación puede continuar procesando otras solicitudes mientras espera la respuesta. Spring WebFlux es ideal para aplicaciones que requieren alta concurrencia, como aplicaciones de transmisión o procesamiento de datos en tiempo real.  
 
 En resumen, si está desarrollando una aplocación web tradicional con comunicación síncronica, Spring Web puede ser una buena opción. Si está desarrolando una aplicacion altamente concurrente con I/O sin bloqueo, Spring WebFlux puede ser una mejor opción.  
 
@@ -74,7 +74,81 @@ public class WeatherService {
 ___
 Como puedes ver, el ejemplo de Spring WebFlux utiliza conceptios de programación reactiva, como Mono y WebClient, para gestionar la I/O no bloquenate y la concurrencia. Mientras que el ejemplo de Sping Web utiliza conceptos tradicionales de I/O bloqueante, como RestTemplate y ResponseEntity.  
 
-Si tanto Spring Web como Spring WebFlux se ejecutan en los mismos recursos del sistema y se realizan 300 solicitudes entrantes al mismo tiempo, Spring Webflux funcionará mejor debido a su enfoque de I/O sin bloqueo.  
+Si tanto **Spring Web** como **Spring WebFlux** se ejecutan en los mismos recursos del sistema y se realizan 300 solicitudes entrantes al mismo tiempo, **Spring Webflux** funcionará mejor debido a su enfoque de I/O sin bloqueo. 
+
+En **Spring Web**, cada solictud entrante se procesa sincrónicamente, lo que significa que el hilo que la gestiona se bloquea hasta recibir la respuesta. 
+
+Con 300 solicitudes entrantes, esto resultaría en el bloqueo de 300 hilos, lo que puede generar un alto consumo de CPU y memoria. 
+
+En cambio, Spring WebFlux podría gestionar 300 solicitudes entrantes simultaneamente con un solo hilo, ya que utiliza I/O no bloqueante. El hilo que gestiona la solicitud no se bloquearía mientras espera la respuesta, sino que podría gestionar otras solicitudes. Esto se traduce en un menor consumo de CPU y memoria en comparación con Spring Web. 
+
+En resumen, si necesita manejar una carga de trabajo de alta concurrencia, Spring WebFlux sería una mejor opción debido a su capacidad para manejar I/O sin bloqueo y su eficiencia en el uso de los recursos del sistema. 
+
+Aquí están las depencias de Maven y los archivos de configuración para Spring Web y Spring WebFlux. 
+
+## Dependencias de Maven para Spring Web:
+```java
+ dependencia > 
+    < groupId > org.springframework.boot </ groupId > 
+    < artifactId > spring-boot-starter-web </ artifactId > 
+    < versión > 2.6.2 </ versión > 
+</ dependencia > 
+
+< dependencia > 
+    < groupId > org.postgresql </ groupId > 
+    < artifactId > postgresql </ artifactId > 
+    < versión > 42.3.1 </ versión > 
+</ dependencia >
+```
+Esta dependencia incluye las siguientes bibliotecas:
+- Web de primavera
+- Spring Web MVC
+- Configuración automática de Spring Boot
+- Actuador Spring Boot (para supervisar y administrar la aplicación)
+
+application.yml
+```java
+servidor: 
+  puerto:  8080 
+spring: 
+  origen de datos: 
+    url:  jdbc:postgresql://localhost:5432/mydb 
+    nombre de usuario:  minombredeusuario 
+    contraseña:  micontraseña 
+    nombre-de-clase-del-controlador:  org.postgresql.Driver 
+  jpa: 
+    hibernate: 
+      ddl-auto:  update
+```
+## Dependencias de Maven para Spring Webflux:
+```java
+< dependencia > 
+    < groupId > org.springframework.boot </ groupId > 
+    < artifactId > spring-boot-starter-webflux </ artifactId > 
+    < versión > 2.6.2 </ versión > 
+</ dependencia > 
+
+< dependencia > 
+    < groupId > org.springframework.boot </ groupId > 
+    < artifactId > spring-boot-starter-data-mongodb-reactive </ artifactId > 
+    < versión > 2.6.2 </ versión > 
+</ dependencia >
+```
+application.yml
+```java
+servidor: 
+  puerto:  8080 
+spring: 
+  datos: 
+    mongodb: 
+      host:  localhost 
+      puerto:  27017 
+      base de datos:  mydb 
+      nombre de usuario:  myusername 
+      contraseña:  mypassword
+```
+
+
 
 
 
