@@ -77,7 +77,7 @@ Loggers:
         - ref: Console
         - ref: FileLogger
 ```
-Aquí los logs de la clase <span style="color: red;">com.myapp</span> deben ir tanto a la consola como al archivo.
+Aquí los logs de la clase `com.myapp` deben ir tanto a la consola como al archivo. deben ir tanto a la consola como al archivo.
 ___
 ### Level
 Define el nivel mínimo de log que se aceptará para este logger.
@@ -90,7 +90,8 @@ Define el nivel mínimo de log que se aceptará para este logger.
 - `error` → para errores que afectan el funcionamiento
 - `fatal` → errores muy graves que probablemente apaguen tu app
 - `off` → desactiva el logging
-[class: level](https://logging.apache.org/log4j/2.x/javadoc/log4j-api/org/apache/logging/log4j/Level.html)
+  
+[logging.apache.org/log4j/2](https://logging.apache.org/log4j/2.x/javadoc/log4j-api/org/apache/logging/log4j/Level.html)
 
 Entonces, `level: debug` significa:
 
